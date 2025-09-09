@@ -9,7 +9,23 @@ In tutti gli altri casi: stampa “Tipo non supportato”
 */
 
 
+let valore: unknown | undefined
 
+function controllaValore() {
+
+  if (typeof valore === "string") {
+    console.log(valore.toUpperCase())
+
+  } else if (typeof valore === "number") {
+    console.log(valore * 2)
+
+  } else if (typeof valore === "boolean") {
+    console.log(valore ? "si" : "no")
+
+  } else {
+    console.log("tipo non supportato")
+  }
+}
 
 /*
 
