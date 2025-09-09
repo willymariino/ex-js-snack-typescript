@@ -9,9 +9,9 @@ In tutti gli altri casi: stampa “Tipo non supportato”
 */
 
 
-let valore: unknown | undefined
+// let valore: unknown | undefined meglio passarlo come parametro
 
-function controllaValore() {
+function controllaValore(valore: unknown) {
 
   if (typeof valore === "string") {
     console.log(valore.toUpperCase())
@@ -26,6 +26,11 @@ function controllaValore() {
     console.log("tipo non supportato")
   }
 }
+
+controllaValore("ciao")
+controllaValore(16)
+controllaValore(false)
+controllaValore({})
 
 /*
 
